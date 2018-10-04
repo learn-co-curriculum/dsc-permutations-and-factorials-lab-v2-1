@@ -43,18 +43,14 @@ What you'll do below is:
 
 ```python
 def factorial(n):
-    prod = 1
-    while n >= 1:
-        prod = prod * n
-        n = n - 1
-    return prod
+    None
 ```
 
 Now, test your function with n=20
 
 
 ```python
-factorial(20) 
+None
 ```
 
 
@@ -70,7 +66,7 @@ Just so you know, Python has a built-in function `factorial` in the  `math` libr
 ```python
 import math 
 
-math.factorial(20)
+None
 ```
 
 
@@ -87,7 +83,7 @@ Hint: a permutation with replacement is needed here. Think carefully of what nee
 
 
 ```python
-app_num = factorial(6)
+app_num = None
 app_num
 ```
 
@@ -100,8 +96,8 @@ app_num
 
 
 ```python
-app_denom = factorial(3)*factorial(3)
-print(app_denom)
+app_denom = None
+app_denom
 ```
 
     36
@@ -109,7 +105,7 @@ print(app_denom)
 
 
 ```python
-app_total = app_num/app_denom
+app_total = None
 app_total
 ```
 
@@ -128,7 +124,7 @@ Think about the sample space and the event space separately. What is the denomin
 
 
 ```python
-denom_phone = 10**4
+denom_phone = None
 denom_phone
 ```
 
@@ -143,7 +139,7 @@ And the numerator?
 
 
 ```python
-numer_phone = 5
+numer_phone = None
 numer_phone
 ```
 
@@ -156,7 +152,7 @@ numer_phone
 
 
 ```python
-prob_unlock = numer_phone/denom_phone
+prob_unlock = None
 prob_unlock
 ```
 
@@ -171,7 +167,7 @@ Right before you lost your phone you ate a pretzel, and you are pretty sure a gr
 
 
 ```python
-denom_phone_smudge = factorial(4) #or math.factorial(4)
+denom_phone_smudge = None #or math.factorial(4)
 denom_phone_smudge
 ```
 
@@ -184,7 +180,7 @@ denom_phone_smudge
 
 
 ```python
-numer_phone_smudge = 5
+numer_phone_smudge = None
 numer_phone_smudge
 ```
 
@@ -197,7 +193,7 @@ numer_phone_smudge
 
 
 ```python
-prob_unlock_smudge = numer_phone_smudge/denom_phone_smudge
+prob_unlock_smudge = None
 prob_unlock_smudge
 ```
 
@@ -212,7 +208,7 @@ Now, imagine you chose an iphone access code containing 3 different numbers, wit
 
 
 ```python
-denom_phone_smudge_2 = ((4*3*2*1)/2) * 3 #or use math.factorial(4)
+denom_phone_smudge_2 = None #or use math.factorial(4)
 denom_phone_smudge_2
 ```
 
@@ -225,7 +221,7 @@ denom_phone_smudge_2
 
 
 ```python
-numer_phone_smudge_2 = 5
+numer_phone_smudge_2 = None 
 numer_phone_smudge_2
 ```
 
@@ -238,7 +234,7 @@ numer_phone_smudge_2
 
 
 ```python
-prob_unlock_smudge_2 = numer_phone_smudge_2/denom_phone_smudge_2
+prob_unlock_smudge_2 = None
 prob_unlock_smudge_2
 ```
 
@@ -259,7 +255,7 @@ First, calculate the sample space. recall that replacement is possible here.
 
 
 ```python
-sample_space_fh = 6**5
+sample_space_fh = None
 sample_space_fh
 ```
 
@@ -279,7 +275,7 @@ Next, calculate the event space. The best way to think of the event space here, 
 
 
 ```python
-ways_to_throw_given_fh= factorial(5)/ (factorial(3)* factorial(2)) # permutation with repetitions
+ways_to_throw_given_fh= None # permutation with repetitions
 ways_to_throw_given_fh
 ```
 
@@ -292,7 +288,7 @@ ways_to_throw_given_fh
 
 
 ```python
-diff_fhses = math.factorial(6)/math.factorial(4)
+diff_fhses = None
 diff_fhses
 ```
 
@@ -307,7 +303,7 @@ Then the event space is
 
 
 ```python
-event_space_fh =  ways_to_throw_given_fh * diff_fhses
+event_space_fh =  None
 event_space_fh
 ```
 
@@ -322,7 +318,7 @@ event_space_fh
 
 
 ```python
-prob_fh = event_space_fh/sample_space_fh
+prob_fh = None
 
 prob_fh
 ```
