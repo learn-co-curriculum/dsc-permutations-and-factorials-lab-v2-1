@@ -1,5 +1,5 @@
 
-## Permutations and Factorials - Lab
+# Permutations and Factorials - Lab
 
 ## Introduction
 
@@ -7,9 +7,10 @@ Before, we saw how the creation of a sample space is crucial in finding probabil
 
 Luckily, probability theory provides us with several formulas that can help us out. One set of formulas are known as **permutations**. This lab will help you get a better understanding of permutations, and provide practice!
 
-## Learning objectives
+## Objectives
 
-In this lab, you'll
+You will be able to:
+
 - Understand how to count permutations, and how factorials are the building blocks of permutations
 - Understand how to mathematically derive how many permutations there are for big sets
 - Understand how to compute permutations of a subset
@@ -204,7 +205,3 @@ prob_fh
 ## Summary
 
 Great job! You got quite some practice in on permutations and factorials, and were even able to use it to calculate probability. Now we'll move over to another concept in combinatorics: combinations.
-
-# Sources
-
-https://brilliant.org/wiki/permutations-with-repetition/
