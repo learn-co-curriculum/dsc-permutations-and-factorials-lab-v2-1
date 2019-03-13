@@ -7,7 +7,7 @@ Before, we saw how the creation of a sample space is crucial in finding probabil
 
 Luckily, probability theory provides us with several formulas that can help us out. One set of formulas are known as **permutations**. This lab will help you get a better understanding of permutations, and provide practice!
 
-## Learning objectives
+## Objectives
 
 You will be able to:
 
@@ -16,7 +16,7 @@ You will be able to:
 - Understand how to compute permutations of a subset
 - Learn about permutations with replacement and repetition
 
-## A note on factorials
+## A Note on Factorials
 
 In the lecture, we talked about permutations in the context of the Michael Jackson coverband "Who's bad". We wanted to calculate how many ways we can order 3 songs in their setlist. We can use factorials for that, and how it's easy to see that you can use factorials for that. For 3 songs, this boils down to
 
@@ -81,10 +81,18 @@ math.factorial(20)
 
 
 
-## Some practice on permutations
+## Some Practice on Permutations
 
-Let's go back to the appointments exercise from the last lab. A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. From what you learned in the permutations lecture, you now have a more structured way of getting to the whole sample space!
-Hint: a permutation with replacement is needed here. Think carefully of what needs to go in the denominator and the numerator respectively. 
+Let's go back to the appointments exercise from the last lab. A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. How many ways are there to order the appointments, based on gender of the students? Just to clarify, we're looking for size of the sample space that lists possible orders like this:
+
+FMFMFM <br />
+MMMFFF <br />
+FMFMMF <br />
+...
+
+
+From what you learned in the permutations lecture, you now have a more structured way of getting to the whole sample space! 
+Hint: a permutation with repetition is needed here, with formula $\dfrac{n!}{n_1!n_2!\ldots n_k!}$. Think carefully of what needs to go in the denominator and the numerator respectively. 
 
 
 ```python
@@ -121,11 +129,13 @@ app_total
 
 
 
-## Permutations: hack a phone
+## Permutations: Hack a Phone
 
 You misplaced your iPhone and are afraid it was stolen. Luckily, your iPhone needs a 4-digit code in order to get in. Imagine that a potential thief can do five attempts at getting the code right before the phone is permanently locked, how big is the chance the thief unlocks the phone?
 
-Think about the sample space and the event space separately. What is the denominator for this problem?
+Think about the sample space and the event space separately. You'll use the formula $P(E) = \dfrac{|E|}{|S|}$ here.
+
+So what should go in the denominator?
 
 
 ```python
@@ -209,7 +219,11 @@ prob_unlock_smudge
 
 
 
-Now, imagine you chose an iphone access code containing 3 different numbers, with numbers 2,7 and 8 (the code is still 4 digits). Now, the thief knows 1 number was reused, but he doesn't know which one. what is the probability now that the phone will be unlocked successfully?
+Now, imagine you chose an iphone access code containing 3 different numbers, with numbers 2,7 and 8 (the code is still 4 digits). Now, the thief knows 1 number was reused (permutations with repetition!), but he doesn't know which one. what is the probability now that the phone will be unlocked successfully?
+
+- For the denominator here, use a permutation with repetition, along with the fact that **you don't know which one is repeated**. Hint: you'll have to multiply your final "permutation with repetition"-result to account for that.
+- For the numerator, use the numerator you used before: the number of trials the thief can try before the phone access is blocked.
+
 
 
 ```python
@@ -250,7 +264,7 @@ prob_unlock_smudge_2
 
 
 
-## Permutations to find the sample and event space
+## Permutations to Find the Sample and Event Space
 
 What are the odds of throwing a "full house" when throwing 5 dices?  Recall, a full house means that you'd throw a three of a certain number along with a pair of a different number.
 
@@ -318,6 +332,18 @@ event_space_fh
     300.0
 
 
+
+** Note on this solution **
+
+
+- There are 10 different ways of throwing a full house of a particular kind. This is a *permutation with repetition*. Recall the TENNESSEE example in the lesson. assuming you have 2 x 4 and 3 x 6, how many ways can we throw this? <br />
+44666 <br />
+46446 <br />
+44646 <br />
+... <br />
+The formula used here is, again $\dfrac{n!}{n_1!n_2!\ldots n_k!} = \dfrac{6!}{2!3!}$
+- 30 types of full houses exist: you're using the formula for permutation of a subset: with 6 possible outcomes when throwing a dice, you want to make sure you only pick 2 outcomes, hence using the formula $P_{k}^{n}= \dfrac{n!}{(n-k)!} = \dfrac{6!}{(6-2!)}$. Note that order matters! a full house with 3 x 6 and 2 x 5 is not the same as a full house with 3 x 5 and 2 x 6.
+- When you multiply these two together, you get to the event space!
 
 ### c) Probability of full house
 
