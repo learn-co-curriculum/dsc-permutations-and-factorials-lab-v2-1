@@ -25,10 +25,22 @@ In the last lesson, we talked about permutations in the context of a coverband c
 setlist = 3*2*1
 ```
 
+
+```python
+# __SOLUTION__ 
+setlist = 3*2*1
+```
+
 Now, writing this out is not an issue when $n$ is small. What if $n$ grows though? Imagine there are 10 songs in the setlist
 
 
 ```python
+setlist = 10*9*8*7*6*5*4*3*2*1
+```
+
+
+```python
+# __SOLUTION__ 
 setlist = 10*9*8*7*6*5*4*3*2*1
 ```
 
@@ -47,12 +59,36 @@ def factorial(n):
     None
 ```
 
+
+```python
+# __SOLUTION__ 
+def factorial(n):
+    prod = 1
+    while n >= 1:
+        prod = prod * n
+        n = n - 1
+    return prod
+```
+
 Now, test your function with n=20
 
 
 ```python
 None
 ```
+
+
+```python
+# __SOLUTION__ 
+factorial(20) 
+```
+
+
+
+
+    2432902008176640000
+
+
 
 Just so you know, Python has a built-in function `factorial` in the  `math` library as well! Let's use our own function in this lab, but just use the `math` function once to check your previous answer!
 
@@ -62,6 +98,21 @@ import math
 
 None
 ```
+
+
+```python
+# __SOLUTION__ 
+import math 
+
+math.factorial(20)
+```
+
+
+
+
+    2432902008176640000
+
+
 
 ## Some Practice on Permutations
 
@@ -84,15 +135,53 @@ app_num
 
 
 ```python
+# __SOLUTION__ 
+app_num = factorial(6)
+app_num
+```
+
+
+
+
+    720
+
+
+
+
+```python
 app_denom = None
 app_denom
 ```
 
 
 ```python
+# __SOLUTION__ 
+app_denom = factorial(3)*factorial(3)
+print(app_denom)
+```
+
+    36
+
+
+
+```python
 app_total = None
 app_total
 ```
+
+
+```python
+# __SOLUTION__ 
+app_total = app_num/app_denom
+app_total
+```
+
+
+
+
+    20.0
+
+
 
 ## Permutations: Hack a Phone
 
@@ -108,6 +197,20 @@ denom_phone = None
 denom_phone
 ```
 
+
+```python
+# __SOLUTION__ 
+denom_phone = 10**4
+denom_phone
+```
+
+
+
+
+    10000
+
+
+
 And the numerator?
 
 
@@ -118,9 +221,37 @@ numer_phone
 
 
 ```python
+# __SOLUTION__ 
+numer_phone = 5
+numer_phone
+```
+
+
+
+
+    5
+
+
+
+
+```python
 prob_unlock = None
 prob_unlock
 ```
+
+
+```python
+# __SOLUTION__ 
+prob_unlock = numer_phone/denom_phone
+prob_unlock
+```
+
+
+
+
+    0.0005
+
+
 
 Right before you lost your phone you ate a pretzel, and you are pretty sure a grease pattern was left on the four crucial digits of your screen. The four letters in your access code are 3,4,7 and 8, and you realize that this information can increase the thief's chances massively. Assuming the thief interprets the smudgemarks in an intelligent way, what are the chances that the phone will be unlocked successfully?
 
@@ -132,15 +263,57 @@ denom_phone_smudge
 
 
 ```python
+# __SOLUTION__ 
+denom_phone_smudge = factorial(4) #or math.factorial(4)
+denom_phone_smudge
+```
+
+
+
+
+    24
+
+
+
+
+```python
 numer_phone_smudge = None
 numer_phone_smudge
 ```
 
 
 ```python
+# __SOLUTION__ 
+numer_phone_smudge = 5
+numer_phone_smudge
+```
+
+
+
+
+    5
+
+
+
+
+```python
 prob_unlock_smudge = None
 prob_unlock_smudge
 ```
+
+
+```python
+# __SOLUTION__ 
+prob_unlock_smudge = numer_phone_smudge/denom_phone_smudge
+prob_unlock_smudge
+```
+
+
+
+
+    0.20833333333333334
+
+
 
 Now, imagine you chose an iphone access code containing 3 different numbers, with numbers 2,7 and 8 (the code is still 4 digits). Now, the thief knows 1 number was reused (permutations with repetition!), but he doesn't know which one. what is the probability now that the phone will be unlocked successfully?
 
@@ -156,15 +329,57 @@ denom_phone_smudge_2
 
 
 ```python
+# __SOLUTION__ 
+denom_phone_smudge_2 = ((4*3*2*1)/2) * 3 #or use math.factorial(4)
+denom_phone_smudge_2
+```
+
+
+
+
+    36.0
+
+
+
+
+```python
 numer_phone_smudge_2 = None 
 numer_phone_smudge_2
 ```
 
 
 ```python
+# __SOLUTION__ 
+numer_phone_smudge_2 = 5
+numer_phone_smudge_2
+```
+
+
+
+
+    5
+
+
+
+
+```python
 prob_unlock_smudge_2 = None
 prob_unlock_smudge_2
 ```
+
+
+```python
+# __SOLUTION__ 
+prob_unlock_smudge_2 = numer_phone_smudge_2/denom_phone_smudge_2
+prob_unlock_smudge_2
+```
+
+
+
+
+    0.1388888888888889
+
+
 
 ## Permutations to Find the Sample and Event Space
 
@@ -179,6 +394,20 @@ First, calculate the sample space. recall that replacement is possible here.
 sample_space_fh = None
 sample_space_fh
 ```
+
+
+```python
+# __SOLUTION__ 
+sample_space_fh = 6**5
+sample_space_fh
+```
+
+
+
+
+    7776
+
+
 
 ### b) event space
 
@@ -195,9 +424,37 @@ ways_to_throw_given_fh
 
 
 ```python
+# __SOLUTION__ 
+ways_to_throw_given_fh= factorial(5)/ (factorial(3)* factorial(2)) # permutation with repetitions
+ways_to_throw_given_fh
+```
+
+
+
+
+    10.0
+
+
+
+
+```python
 diff_fhses = None
 diff_fhses
 ```
+
+
+```python
+# __SOLUTION__ 
+diff_fhses = math.factorial(6)/math.factorial(4)
+diff_fhses
+```
+
+
+
+
+    30.0
+
+
 
 Then the event space is
 
@@ -207,6 +464,20 @@ event_space_fh =  None
 event_space_fh
 ```
 
+
+```python
+# __SOLUTION__ 
+event_space_fh =  ways_to_throw_given_fh * diff_fhses
+event_space_fh
+```
+
+
+
+
+    300.0
+
+
+
 ### c) Probability of full house
 
 
@@ -215,6 +486,21 @@ prob_fh = None
 
 prob_fh
 ```
+
+
+```python
+# __SOLUTION__ 
+prob_fh = event_space_fh/sample_space_fh
+
+prob_fh
+```
+
+
+
+
+    0.038580246913580245
+
+
 
 ## Summary
 
