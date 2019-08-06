@@ -478,6 +478,32 @@ event_space_fh
 
 
 
+
+```python
+# __SOLUTION__
+#
+# Note on this solution:
+# 
+# There are 10 different ways of throwing a full house of a particular kind. 
+# This is a permutation with repetition. Recall the TENNESSEE example in the lesson. 
+# assuming you have 2 x 4 and 3 x 6, how many ways can we throw this? 
+#
+# 44666 
+# 46446 
+# 44646 
+#
+# The formula used here is, again ((n!)/(n_1! n_2! ... n_k!)) = (6!)(2!3!)$
+# 
+# 30 types of full houses exist: you're using the formula for permutation of a subset: 
+# with 6 possible outcomes when throwing a dice, you want to make sure you only pick 
+# 2 outcomes, hence using the formula P_{k}^{n}= n!/(n-k)! = (6!)/(6-2)!. 
+# Note that order matters! a full house with 3 x 6 and 2 x 5 is not the same as a full 
+# house with 3 x 5 and 2 x 6.
+# 
+# When you multiply these two together, you get to the event space!
+
+```
+
 ### c) Probability of full house
 
 
