@@ -96,7 +96,7 @@ Hint: a permutation with repetition is needed here, with formula $\dfrac{n!}{n_1
 
 
 ```python
-app_num = factorial(6)
+app_num = factorial(6) # 6 total students (3 male + 3 female)
 app_num
 ```
 
@@ -109,7 +109,7 @@ app_num
 
 
 ```python
-app_denom = factorial(3)*factorial(3)
+app_denom = factorial(3)*factorial(3) # 2 groups, with 3 students each
 print(app_denom)
 ```
 
@@ -139,7 +139,7 @@ So what should go in the denominator?
 
 
 ```python
-denom_phone = 10**4
+denom_phone = 10**4 # Each of the 4 digits can be a number between 0 and 9 (10 possible numbers)
 denom_phone
 ```
 
@@ -154,7 +154,7 @@ And the numerator?
 
 
 ```python
-numer_phone = 5
+numer_phone = 5 # 5 tries at unlocking the phone
 numer_phone
 ```
 
@@ -182,7 +182,7 @@ Right before you lost your phone you ate a pretzel, and you are pretty sure a gr
 
 
 ```python
-denom_phone_smudge = factorial(4) #or math.factorial(4)
+denom_phone_smudge = factorial(4) #or math.factorial(4) - every combo of 3, 4, 7, 8
 denom_phone_smudge
 ```
 
@@ -195,7 +195,7 @@ denom_phone_smudge
 
 
 ```python
-numer_phone_smudge = 5
+numer_phone_smudge = 5 # 5 tries at unlocking the phone
 numer_phone_smudge
 ```
 
@@ -227,7 +227,7 @@ Now, imagine you chose an iphone access code containing 3 different numbers, wit
 
 
 ```python
-denom_phone_smudge_2 = ((4*3*2*1)/2) * 3 #or use math.factorial(4)
+denom_phone_smudge_2 = ((4*3*2*1)/2) * 3 #or use math.factorial(4), 2 identical numbers, 3 possible resused numbers
 denom_phone_smudge_2
 ```
 
@@ -240,7 +240,7 @@ denom_phone_smudge_2
 
 
 ```python
-numer_phone_smudge_2 = 5
+numer_phone_smudge_2 = 5 # 5 tries at unlocking the phone
 numer_phone_smudge_2
 ```
 
@@ -274,7 +274,7 @@ First, calculate the sample space. recall that replacement is possible here.
 
 
 ```python
-sample_space_fh = 6**5
+sample_space_fh = 6**5 # 5 dice, each can be a number between 1-6
 sample_space_fh
 ```
 
@@ -307,7 +307,7 @@ ways_to_throw_given_fh
 
 
 ```python
-diff_fhses = math.factorial(6)/math.factorial(4)
+diff_fhses = math.factorial(6)/math.factorial(4) # P_{k}^{n}= n!/(n-k)! = (6!)/(6-2)!
 diff_fhses
 ```
 
