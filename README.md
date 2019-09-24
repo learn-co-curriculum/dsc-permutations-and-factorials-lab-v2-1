@@ -3,9 +3,9 @@
 
 ## Introduction
 
-Before, we saw how the creation of a sample space is crucial in finding probabilities. The issue however is that, when the sample spaces grows bigger, it is not straightforward to manually compute the size of sample sets anymore.
+Before, we saw how the creation of a sample space is crucial in finding probabilities. The issue, however is that, when the sample space grows bigger, it is not straightforward to manually compute the size of sample sets anymore.
 
-Luckily, probability theory provides us with several formulas that can help us out. One set of formulas are known as **permutations**. This lab will help you get a better understanding of permutations, and provide practice!
+Luckily, probability theory provides us with several formulas that can help us out. One set of formulas is known as **permutations**. This lab will help you get a better understanding of permutations, and provide practice!
 
 ## Objectives
 
@@ -18,7 +18,7 @@ You will be able to:
 
 ## A Note on Factorials
 
-In the last lesson, we talked about permutations in the context of a coverband creating a setlist. We wanted to calculate how many ways we can order 3 songs in their setlist. We can use factorials for that, and how it's easy to see that you can use factorials for that. For 3 songs, this boils down to
+In the last lesson, we talked about permutations in the context of a coverband creating a setlist. We wanted to calculate how many ways we can order 3 songs in their setlist. We can use factorials for that. For 3 songs, this boils down to
 
 
 ```python
@@ -49,8 +49,8 @@ You wouldn't want to repeat this for 25 songs...  Let's create a function for th
 What you'll do below is:
 
 - create a function that takes one argument, $n$
-- initialize prod as 1
-- next, use prod in a while-loop (what is the stopping criterion?)
+- initialize `prod` as 1
+- next, use `prod` in a `while` loop (what is the stopping criterion?)
 - update $n$ so it decreases with value 1 each iteration. This way you essentially calculate $n*(n-1)*(n-2)*\ldots*(1)$
 
 
@@ -116,7 +116,7 @@ math.factorial(20)
 
 ## Some Practice on Permutations
 
-Let's go back to the appointments exercise from the last lab. A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students, and 3 by female students. How many ways are there to order the appointments, based on gender of the students? Just to clarify, we're looking for size of the sample space that lists possible orders like this:
+Let's go back to the appointments exercise from the last lab. A teaching assistant is holding office hours so students can make appointments. She has 6 appointments scheduled today, 3 by male students and 3 by female students. How many ways are there to order the appointments, based on gender of the students? Just to clarify, we're looking for size of the sample space that lists possible orders like this:
 
 FMFMFM <br />
 MMMFFF <br />
@@ -411,9 +411,9 @@ sample_space_fh
 
 ### b) event space
 
-Next, calculate the event space. The best way to think of the event space here, is split it up in 2 parts:
+Next, calculate the event space. The best way to think of the event space here is to split it up in 2 parts:
 - first, try to constrain your problem to a more specific problem, let's say, how many ways can we throw a full house if we have a pair of 4s and three 6s?
-- next, extend your problem asking yourself how many *different* full houses are possible.
+- next, extend your problem by asking yourself how many *different* full houses are possible.
 - multiply the two!
 
 
@@ -530,4 +530,4 @@ prob_fh
 
 ## Summary
 
-Great job! You got quite some practice in on permutations and factorials, and were even able to use it to calculate probability. Now we'll move over to another concept in combinatorics: combinations.
+Great job! You got quite some practice with permutations and factorials, and were even able to use it to calculate probability. Now, we'll move over to another concept in combinatorics: combinations.
