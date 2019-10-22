@@ -11,10 +11,9 @@ Luckily, probability theory provides us with several formulas that can help us o
 
 You will be able to:
 
-- Understand how to count permutations, and how factorials are the building blocks of permutations
-- Understand how to mathematically derive how many permutations there are for big sets
-- Understand how to compute permutations of a subset
-- Learn about permutations with replacement and repetition
+* Mathematically derive how many permutations there are for large sets
+* Calculate permutations of a subset
+* Calculate permutations with repetition and replacement
 
 ## A Note on Factorials
 
@@ -92,6 +91,7 @@ FMFMMF <br />
 
 
 From what you learned in the permutations lecture, you now have a more structured way of getting to the whole sample space! 
+
 Hint: a permutation with repetition is needed here, with formula $\dfrac{n!}{n_1!n_2!\ldots n_k!}$. Think carefully of what needs to go in the denominator and the numerator respectively. 
 
 
@@ -227,7 +227,7 @@ Now, imagine you chose an iphone access code containing 3 different numbers, wit
 
 
 ```python
-denom_phone_smudge_2 = ((4*3*2*1)/2) * 3 #or use math.factorial(4), 2 identical numbers, 3 possible resused numbers
+denom_phone_smudge_2 = ((4*3*2*1)/2) * 3 #or use math.factorial(4), 2 identical numbers, 3 possible reused numbers
 denom_phone_smudge_2
 ```
 
@@ -266,11 +266,11 @@ prob_unlock_smudge_2
 
 ## Permutations to Find the Sample and Event Space
 
-What are the odds of throwing a "full house" when throwing 5 dices?  Recall, a full house means that you'd throw a three of a certain number along with a pair of a different number.
+What are the odds of throwing a "full house" when throwing 5 dice?  Recall, a full house means that you'd throw a three of a certain number along with a pair of a different number.
 
-###  a) sample space
+###  a) Sample space
 
-First, calculate the sample space. recall that replacement is possible here.
+First, calculate the sample space. Recall that replacement is possible here.
 
 
 ```python
@@ -285,7 +285,7 @@ sample_space_fh
 
 
 
-### b) event space
+### b) Event space
 
 Next, calculate the event space. The best way to think of the event space here is to split it up in 2 parts:
 - first, try to constrain your problem to a more specific problem, let's say, how many ways can we throw a full house if we have a pair of 4s and three 6s?
