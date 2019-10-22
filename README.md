@@ -530,7 +530,7 @@ prob_fh
 
 ## Level-Up: Factorials and Recursion 
 
-In the last lesson, we talked about permutations in the context of a coverband creating a setlist. We wanted to calculate how many ways we can order 3 songs in their setlist. There were 3 possible ways of choosing a first song, 2 possible ways of choosing a second song, and only 1 way of choosing a third and final song, for $3 * 2 *1 = 6$ different ways in which the three different songs could be played. This number, 6, is equal to the factorial of 3, $3!$, the number of permutations of 3 distinct objects. 
+Let's return to factorials for a moment. In the last lesson, we talked about permutations in the context of a coverband creating a setlist. We wanted to know how many ways we could order 3 songs in their setlist. There were 3 possible ways of choosing a first song, 2 possible ways of choosing a second song, and only 1 way of choosing a third and final song, for $3 * 2 *1 = 6$ different ways in which the three different songs could be played. This number, 6, is equal to the factorial of 3, $3!$, the number of permutations of 3 distinct objects. 
 
 Here, $3! = (3 * 2 * 1) = 6$. Notice that this is the same as writing $3 * 2! = 3 * (2 * 1)$ and $3 * 2 * 1! = 3 * 2 * (1)$. (By definition, the factorial of 1, $1!$, is equal to 1. The factorial of 0, $0!$ is also defined to be equal to 1.)
 
