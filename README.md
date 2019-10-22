@@ -374,6 +374,45 @@ prob_fh
 
 
 
+## Level-Up: Factorials and Recursion 
+
+In the last lesson, we talked about permutations in the context of a coverband creating a setlist. We wanted to calculate how many ways we can order 3 songs in their setlist. There were 3 possible ways of choosing a first song, 2 possible ways of choosing a second song, and only 1 way of choosing a third and final song, for $3 * 2 *1 = 6$ different ways in which the three different songs could be played. This number, 6, is equal to the factorial of 3, $3!$, the number of permutations of 3 distinct objects. 
+
+Here, $3! = (3 * 2 * 1) = 6$. Notice that this is the same as writing $3 * 2! = 3 * (2 * 1)$ and $3 * 2 * 1! = 3 * 2 * (1)$. (By definition, the factorial of 1, $1!$, is equal to 1. The factorial of 0, $0!$ is also defined to be equal to 1.)
+
+We can generalize this to the case of computing the factorial of an integer n, $n!$. The factorial of n, $n!$, can be written as $n * (n-1)!$, which itself can be written as $n * (n-1) * (n-2)!$. That is, we can define the factorial of n in terms of the product of n by the factorial of (n-1), and so on and so forth, as seen in the equation below: 
+
+$$ n! = n * (n-1)! = n * (n-1) * (n-2)! = ... = n * (n-1) * (n-2) * \ldots * 1! = n* (n-1) * (n-2) * \ldots * 2 * 1 $$ 
+
+Earlier in this lab, we defined a Python function, `factorial(n)`, to compute the factorial of an integer n. In that case, we used a `while` loop with a stopping criterion to obtain a result. 
+
+However, there is another way we could have defined this function, using the __recursive__ nature of the factorial function.
+
+### Recursion 
+When we define a function in terms of itself, in this case, the factorial of n in terms of the factorial of (n-1), we are using **recursion**.  Recursive functions are functions that can call themselves in order to loop until a condition is met. In the Appendix to this Module, we go over recursive functions in Python in more detail.
+
+We can use recursion to define a function that will return the factorial of an integer n as follows: 
+
+``` python
+def factorial_recursion(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial_recursion(n-1) 
+```
+
+Let's go over what happens with this function for the case n = 3: 
+
+* To start, since n is not equal to 1, we skip the `if` statement and continue to the `else` statement, where we obtain that `factorial_recursion(3) = 3 * factorial_recursion(2)`.
+
+* To calculate `factorial_recursion(2)`, since the argument passed to the function is not equal to 1, we once again skip the `if` statement and continue to the `else` statement, where we obtain that `factorial_recursion(2) = 2 * factorial_recursion(1)`. 
+    * At this point, `factorial_recursion(3) = 3 * (2 * factorial_recursion(1))`
+
+* To calculate `factorial_recursion(1)`, since the argument passed to the function _is_ equal to 1, we return 1. 
+    * At this point, `factorial_recursion(3) = 3 * 2 * 1`, and our code returns the answer we expect, `6`. 
+
+Try it out in the code cell below!
+
 ## Summary
 
 Great job! You got quite some practice with permutations and factorials, and were even able to use it to calculate probability. Now, we'll move over to another concept in combinatorics: combinations.
