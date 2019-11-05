@@ -231,7 +231,7 @@ Earlier in this lab, we defined a Python function, `factorial(n)`, to compute th
 However, there is another way we could have defined this function, using the __recursive__ nature of the factorial function.
 
 ### Recursion 
-When we define a function in terms of itself, in this case, the factorial of n in terms of the factorial of (n-1), we are using **recursion**.  Recursive functions are functions that can call themselves in order to loop until a condition is met. In the Appendix to this Module, we go over recursive functions in Python in more detail.
+When we define a function in terms of itself, in this case, the factorial of n in terms of the factorial of (n-1), we are using **recursion**.  Recursive functions are functions that can call themselves in order to loop until a condition is met. 
 
 We can use recursion to define a function that will return the factorial of an integer n as follows: 
 
@@ -267,6 +267,8 @@ Try it out in the code cell below!
 
 # factorial_recursion(3)
 ```
+
+You'll have a chance to learn much more about recursion in Python and solve some problems using recursion in the Appendix to this Module.
 
 ## Summary
 
