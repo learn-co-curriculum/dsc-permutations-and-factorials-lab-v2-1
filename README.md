@@ -413,8 +413,24 @@ Let's go over what happens with this function for the case n = 3:
 
 Try it out in the code cell below!
 
-You'll have a chance to learn much more about recursion in Python and solve some problems using recursion in the Appendix to this Module.
+As a last step, check that the result you obtain with the `factorial_recursion` function for n = 3 is the same as the result you obtain with the `factorial` function defined earlier in this lab:
+
+
+```python
+factorial(3)
+```
+
+
+
+
+    6
+
+
+
+Good job! 
 
 ## Summary
 
-Great job! You got quite some practice with permutations and factorials, and were even able to use it to calculate probability. Now, we'll move over to another concept in combinatorics: combinations.
+In this lab, you got quite some practice with permutations and factorials, and were even able to use it to calculate probability. You also had a gentle introduction to recursive functions in Python. You'll have a chance to learn much more about recursion in Python and solve some problems using recursion in the Appendix to this Module. 
+
+Now, we'll move over to another concept in combinatorics: combinations.
