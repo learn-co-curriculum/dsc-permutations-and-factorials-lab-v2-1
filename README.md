@@ -126,7 +126,7 @@ Right before you lost your phone you ate a pretzel, and you are pretty sure a gr
 
 
 ```python
-denom_phone_smudge = None #or math.factorial(4)
+denom_phone_smudge = None
 denom_phone_smudge
 ```
 
@@ -150,7 +150,7 @@ Now, imagine you chose an iphone access code containing 3 different numbers, wit
 
 
 ```python
-denom_phone_smudge_2 = None #or use math.factorial(4)
+denom_phone_smudge_2 = None
 denom_phone_smudge_2
 ```
 
