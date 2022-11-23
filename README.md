@@ -1,4 +1,3 @@
-
 # Permutations and Factorials - Lab
 
 ## Introduction
@@ -227,7 +226,7 @@ Now, imagine you chose an iphone access code containing 3 different numbers, wit
 
 
 ```python
-denom_phone_smudge_2 = ((4*3*2*1)/2) * 3 #or use math.factorial(4), 2 identical numbers, 3 possible reused numbers
+denom_phone_smudge_2 = ((4*3*2*1)/2) * 3 #or use math.factorial(4) / 2 identical numbers * 3 possible reused numbers
 denom_phone_smudge_2
 ```
 
